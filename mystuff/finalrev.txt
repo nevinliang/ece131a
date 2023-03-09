@@ -1,0 +1,32 @@
+joint pmf = pXY(x,y) = P(X = x and Y = y)
+marginal pmf = pY(y) = P(Y = y) = sum of all pXY(x,y') when y' = y
+^^ both discrete
+
+
+vv cdf for both discrete and continuous
+
+joint cdf = FXY(x,y) = P(X <= x and Y <= y)
+page 258: 5 rules
+- x1,-inf = 0; -inf, y1 = 0; inf, inf = 1;
+marginal cdf = FX(x) = FXY(x, inf)
+			 = FY(y) = FXY(inf, y)
+
+
+joint cdf of 2 continuous random vars:
+FXY(x,y) = integral from -inf to x of
+			the integral from -inf to y of
+				fXY(x',y')dydx
+
+fXY(x,y) = d^2 FXY(x,y) / dxdy
+
+marginal pdfs
+fX(x) = integral from -inf to inf of fXY(x,y) dy
+
+independence of 2 RV if
+
+	discrete: joint pmf = product of individual marginal pmfs
+	continuous: joint pdf = product of individual marginal pdfs
+	joint cdf = product of individual marginal cdfs
+
+
+
